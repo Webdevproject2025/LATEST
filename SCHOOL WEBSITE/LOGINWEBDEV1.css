@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: url('bg.jpg') no-repeat center center/cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.logo {
+  width: 80px;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.content {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  display: none;
+  max-width: 800px;
+}
+
+#homeContent {
+  display: block;
+}
+
+h1, h2 {
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+}
+
+p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.login-btn,
+.register-btn,
+.submit-button {
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 21%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.login-btn:hover,
+.register-btn:hover,
+.submit-button:hover {
+  background-color: #3182ce;
+}
+
+#aboutContent p {
+  font-size: 14px; 
+  line-height: 1.5;
+}
+
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background-color: #4299e1; 
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: #4299e1;
+  background-color: rgba(66, 153, 225, 0.1); 
+  border-radius: 6px;
+  transform: scale(1.05);
+}
+
+

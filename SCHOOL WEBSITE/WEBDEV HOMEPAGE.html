@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="Logoo.png">
+    <title>School Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="tables.css">
+    <link rel="stylesheet" href="airtag.css">
+    <link rel="stylesheet" href="Masterlist.css">
+    <link rel="stylesheet" href="Checklist.css">
+    <link rel="stylesheet" href="BMI.css">
+    <link rel="stylesheet" href="Data-Entry1.css">
+    <link rel="stylesheet" href="Data-Entry2.css">
+    <link rel="stylesheet" href="A-Grades.css">
+    <script src="dashboard.js"></script>
+    <script src="Airtag.js"></script>
+    <script src="Masterlist.js"></script>
+    <script src="Checklist.js"></script>
+    <script src="BMI.js"></script>
+    <script src="Data-Entry1.js"></script>
+    <script src="Data-Entry2.js"></script>
+    <script src="A-Grades.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <img src="Logoo.png" alt="School Logo" class="logo">
+            <h2>JFBSHS</h2>
+            <nav>
+                <div class="menu">
+                    <a href="#" class="menu-item">GENERAL</a>
+                    <div class="submenu">
+                        <a href="#" onclick="loadContent('status')">STATUS</a>
+                        <a href="#" onclick="loadContent('airtag')">AIRTAG</a>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <a href="#" class="menu-item">STUDENT RECORDS</a>
+                    <div class="submenu">
+                        <a href="#" onclick="loadContent('masterlist')">MASTERLIST</a>
+                        <a href="#" onclick="loadContent('checklist')">CHECKLIST</a>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <a href="#" class="menu-item">HEALTH AND DATA</a>
+                    <div class="submenu">
+                        <a href="#" onclick="loadContent('bmi')">BMI</a>
+                        <a href="#" onclick="loadContent('data-entry-1')">DATA ENTRY 1</a>
+                        <a href="#" onclick="loadContent('data-entry-2')">DATA ENTRY 2</a>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <a href="#" class="menu-item">GRADES</a>
+                    <div class="submenu">
+                        <a href="#" onclick="loadContent('a-grades')">A GRADES</a>
+                        <a href="#" onclick="loadContent('b-grades')">B GRADES</a>
+                        <a href="#" onclick="loadContent('a-summary')">A SUMMARY</a>
+                        <a href="#" onclick="loadContent('b-summary')">B SUMMARY</a>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <a href="#" class="menu-item">CARD TRANSACTIONS</a>
+                    <div class="submenu">
+                        <a href="#" onclick="loadContent('card-in')">CARD IN</a>
+                        <a href="#" onclick="loadContent('card-out')">CARD OUT</a>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <a href="#" class="menu-item">SCHOOL FORMS</a>
+                    <div class="submenu">
+                        <a href="#" onclick="loadContent('sf1')">SF1</a>
+                        <a href="#" onclick="loadContent('sfaa')">SFAA</a>
+                        <a href="#" onclick="loadContent('sf2a')">SF2A</a>
+                        <a href="#" onclick="loadContent('sf2b')">SF2B</a>
+                        <a href="#" onclick="loadContent('sf5a')">SF5A</a>
+                        <a href="#" onclick="loadContent('sf5b')">SF5B</a>
+                        <a href="#" onclick="loadContent('sf10a')">SF10A</a>
+                        <a href="#" onclick="loadContent('sf10b')">SF10B</a>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <a href="#" class="menu-item">AWARDS & RECOGNITION</a>
+                    <div class="submenu">
+                        <a href="#" onclick="loadContent('with-honors')">WITH HONORS</a>
+                        <a href="#" onclick="loadContent('special-case')">SPECIAL CASE</a>
+                        <a href="#" onclick="loadContent('certificate')">CERTIFICATE</a>
+                        <a href="#" onclick="loadContent('class-ranking')">CLASS RANKING</a>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <a href="#" class="menu-item">ATTENDANCE</a>
+                    <div class="submenu">
+                        <a href="#" onclick="loadContent('attendance-summary')">ATTENDANCE SUMMARY</a>
+                        <a href="#" onclick="loadContent('perfect-attendance')">PERFECT ATTENDANCE</a>
+                        <a href="#" onclick="loadContent('observed-values')">OBSERVED VALUES</a>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <a href="#" class="menu-item">GRADE SLIPS</a>
+                    <div class="submenu">
+                        <a href="#" onclick="loadContent('gradeslips-a4')">GRADESLIPS A4</a>
+                        <a href="#" onclick="loadContent('gradeslip')">GRADESLIP</a>
+                    </div>
+                </div>
+            </nav>
+            <button class="logout-btn" onclick="location.href='LOGINWEBDEV1.html'">LOG OUT</button>
+        </aside>
+
+        <main class="content-area">
+            <div id="content-container">
+                <div class="welcome-message">
+                    <h1>Welcome to School Management System</h1>
+                    <p>Please select an option from the sidebar menu to get started.</p>
+                </div>
+            </div>
+
+            <div id="add-student-form" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border: 1px solid #ccc; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); z-index: 1000;">
+                <h2>Add New Student</h2>
+                <label for="new-lrn">LRN:</label><br>
+                <input type="text" id="new-lrn" name="new-lrn"><br><br>
+                <label for="new-full-name">Full Name:</label><br>
+                <input type="text" id="new-full-name" name="new-full-name"><br><br>
+                <label for="new-section">Section:</label><br>
+                <input type="text" id="new-section" name="new-section"><br><br>
+                <input type="text" id="new-contact" name="new-contact"><br><br>
+                <label for="new-adviser">Adviser:</label><br>
+                <input type="text" id="new-adviser" name="new-adviser"><br><br>
+                <button class="btn btn-add" onclick="saveNewStudent()">Add Student</button>
+                <button onclick="closeAddStudentForm()">Cancel</button>
+            </div>
+
+
+            <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 999;"></div>
+        </main>
+    </div>
+    </body>
+   
+</html>

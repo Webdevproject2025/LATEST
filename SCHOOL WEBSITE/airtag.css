@@ -1,0 +1,401 @@
+.airtag-controls {
+    margin-bottom: 15px;
+}
+
+.student-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.student-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    padding: 8px 0;
+    margin-bottom: 8px;
+}
+
+.lrn-display {
+    margin-right: 10px; 
+    font-size: 13px; 
+}
+
+.card-header input[type="text"].lrn-edit {
+    width: calc(100% - 10px);
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.close-button {
+    color: #ff4d4d;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.full-name {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.section-tag {
+    font-size: 0.85em;
+    color: #007bff;
+    background-color: #e7f3ff;
+    padding: 3px 5px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    align-self: flex-start;
+}
+
+.info {
+    font-size: 0.9em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.info .label {
+    font-weight: bold;
+    width: 80px;
+    margin-right: 5px;
+    color: #555;
+}
+
+.info .value {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.card-footer {
+    background-color: #eee;
+    padding: 8px 0;
+    border-top: 1px solid #ddd;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    text-align: center;
+    font-size: 0.75em;
+    color: #555;
+    margin-top: 10px;
+}
+
+.card-footer input[type="text"].adviser-edit {
+    width: calc(100% - 10px);
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 0.8em;
+}
+
+.edit-actions {
+    display: none;
+    justify-content: flex-end;
+    padding: 8px 0;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.student-card.editing .edit-actions {
+    display: flex;
+}
+
+.edit-actions button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.save-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.cancel-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.student-card.editing .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.student-card.editing .card-content label {
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #333;
+    width: 80px; /* Set a fixed width for labels in edit mode */
+    display: inline-block; /* Make labels inline-block */
+    margin-right: 5px; /* Add some space between label and input */
+}
+
+.student-card.editing .card-content input[type="text"] {
+    width: calc(100% - 90px); /* Adjust input width based on label width and margin */
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 0.9em;
+    margin-top: 2px;
+    display: inline-block; /* Make inputs inline-block */
+}
+
+.student-card.editing .full-name,
+.student-card.editing .section-tag {
+    align-self: flex-start;
+    width: 100%; /* Make full name and section full width in edit */
+}
+
+.student-card.editing .info {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+.student-card.editing .info label {
+    width: 80px;
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9em;
+    margin-right: 5px;
+}
+
+.student-card.editing .info input[type="text"] {
+    flex: 1; /* This will make input fill the remaining space */
+    min-width: 0; /* Prevent overflowing */
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9em;
+    box-sizing: border-box;
+}
+
+.student-card.editing .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.student-card.editing .card-header input[type="text"].lrn-edit {
+    width: auto;
+    flex-grow: 1;
+    margin-right: 5px;
+}
+
+.student-card {
+    min-width: 250px;
+    max-width: 100%;
+}
+
+.btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em;
+}
+
+.btn-blue {
+    background-color: #2196F3;
+}
+
+.btn-green {
+    background-color: #4CAF50;
+}
+
+.btn-add {
+    background-color: #4CAF50;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.filter-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.filter-controls label {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.filter-controls select,
+.filter-controls input[type="text"] {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.filter-controls select {
+    width: 120px;
+}
+
+.filter-controls input[type="text"] {
+    width: 180px;
+}
+
+.student-card.editing .card-content input[type="text"] {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.card-header {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    padding: 8px 10px; 
+}
+
+.lrn-display {
+    margin-right: 10px; 
+}
+
+.edit-button {
+    margin-right: 5px; 
+    cursor: pointer; 
+   
+}
+
+.close-button {
+    cursor: pointer; 
+    color: #ff4d4d; 
+    font-weight: bold;
+    font-size: 1.2em;
+    
+}
+
+
+.edit-button, .save-button, .cancel-button, .close-button {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, opacity 0.3s ease; 
+    opacity: 0.8; 
+}
+
+
+.edit-button:hover, .save-button:hover, .cancel-button:hover, .close-button:hover {
+    opacity: 1.0; 
+    background-color: #f0f0f0; 
+}
+
+
+.edit-button:active, .save-button:active, .cancel-button:active, .close-button:active {
+    opacity: 0.9; 
+    background-color: #e0e0e0; 
+}
+
+
+.edit-button {
+    color: #007bff;
+    cursor: pointer; 
+}
+
+.edit-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.edit-fields .info {
+    display: flex;
+    align-items: center;
+}
+
+.edit-fields .info label {
+    width: 80px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    text-align: left;
+}
+
+.edit-fields .info input[type="text"] {
+    flex-grow: 1;
+    max-width: 130px; /* Baguhin ang value na ito */
+    box-sizing: border-box;
+}
+
+.save-button {
+    background-color: #28a745; 
+    color: white;
+    font-weight: bold;
+}
+.save-button:hover {
+    background-color: #218838; 
+}
+
+
+.cancel-button {
+    background-color: #dc3545; 
+    color: white;
+    font-weight: bold;
+}
+.cancel-button:hover {
+    background-color: #c82333; 
+}
+
+
+.close-button {
+    color: #ff4d4d;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.close-button:hover {
+    color: #cc0000; 
+    background-color: #ffe0e0; 
+}
+
+.edit-actions {
+    display: none;
+    margin-top: 10px;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  
+  .student-card.editing .edit-actions {
+    display: flex;
+  }
+  

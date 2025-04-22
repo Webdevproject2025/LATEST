@@ -1,0 +1,269 @@
+/* Basic Styling for Grades Table */
+.editable-grades-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    min-width: 1000px;
+    font-size: 14px;
+}
+
+.editable-grades-table th,
+.editable-grades-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.editable-grades-table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+
+.editable-grades-table thead th {
+    background-color: #f0f8ff;
+    color: #333;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.editable-grades-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.learners-name {
+    text-align: left;
+}
+
+.grade-input {
+    width: 60px;
+}
+
+.final-grade {
+    font-weight: bold;
+}
+
+/* Button styles */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    gap: 15px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 146px; /* Fixed width for both buttons */
+    height: 44px; /* Fixed height for both buttons */
+}
+
+.btn-add-row {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-save {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-print {
+    background-color: #777;
+    color: white;
+}
+
+.btn svg, .btn i {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.btn-add-row svg {
+    margin-right: 5px;
+    font-size: 1em;
+}
+
+.btn-save i {
+    margin-right: 5px;
+    font-size: 1em;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-add-row:hover {
+    background-color: #218838;
+}
+
+.btn-save:hover {
+    background-color: #0056b3;
+}
+
+.btn-print:hover {
+    background-color: #555;
+}
+
+/* General styling */
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.record-heading {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table-wrapper {
+    padding: 20px;
+    background: #fefefe;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.custom-table-container {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+.grade-input,
+.name-input,
+.gender-select {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 13px;
+    background-color: #fff;
+    transition: border 0.2s;
+}
+
+.grade-input:focus,
+.name-input:focus,
+.gender-select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.average-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.final-output-label {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 2px;
+}
+
+.pass-or-fail {
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+
+@media print {
+    body {
+        background-color: white;
+        margin: 0;
+        padding: 20px;
+        font-size: 12px;
+    }
+    
+    .table-wrapper {
+        box-shadow: none;
+        padding: 0;
+    }
+    
+    .custom-table-container {
+        border: none;
+        box-shadow: none;
+    }
+    
+    .editable-grades-table {
+        width: 100%;
+        font-size: 10px;
+    }
+    
+    .editable-grades-table th,
+    .editable-grades-table td {
+        padding: 5px;
+        border: 1px solid #000;
+    }
+    
+    .editable-grades-table th {
+        background-color: #f2f2f2 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .button-container,
+    .btn-add-row,
+    .btn-save {
+        display: none;
+    }
+    
+    input.grade-input, 
+    input.name-input,
+    select.gender-select {
+        border: none;
+        background: transparent;
+        font-size: 10px;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+    
+    h2.record-heading {
+        margin-top: 0;
+        font-size: 18px;
+    }
+    
+   
+    .page-break-after {
+        page-break-after: always;
+    }
+    
+  
+    @page {
+        margin: 1.5cm;
+    }
+}

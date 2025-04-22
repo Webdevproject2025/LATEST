@@ -1,0 +1,173 @@
+/* interactive-masterlist.css */
+.interactive-masterlist-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.interactive-masterlist-table th,
+.interactive-masterlist-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.interactive-masterlist-table thead th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.interactive-masterlist-table input[type="text"] {
+    width: 100%;
+    padding: 6px;
+    margin: 0;
+    box-sizing: border-box;
+    border: none; 
+    font-size: inherit; 
+}
+
+.btn-print, .btn-add-row {
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.btn-add-row {
+    background-color: #28a745;
+    margin-left: 10px;
+}
+
+
+.masterlist-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.filter-group label {
+    font-weight: bold;
+}
+
+#select-class {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.interactive-masterlist-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.9em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden; 
+}
+
+.interactive-masterlist-table th,
+.interactive-masterlist-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.interactive-masterlist-table thead th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.interactive-masterlist-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.interactive-masterlist-table input[type="text"] {
+    width: calc(100% - 12px); 
+    padding: 6px;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid transparent; 
+    font-size: inherit;
+    background-color: transparent; 
+}
+
+.interactive-masterlist-table input[type="text"]:focus {
+    border-bottom: 1px solid #007bff; 
+    outline: none; 
+}
+
+.btn-print,
+.btn-add-row {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-print:hover,
+.btn-add-row:hover {
+    background-color: #0056b3;
+}
+
+.btn-add-row {
+    background-color: #28a745;
+    margin-left: 10px;
+}
+
+.btn-add-row:hover {
+    background-color: #1e7e34;
+}
+
+
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .interactive-masterlist-table, .interactive-masterlist-table * {
+        visibility: visible;
+    }
+    .interactive-masterlist-table {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100% !important;
+        border-collapse: collapse !important;
+    }
+    .interactive-masterlist-table th,
+    .interactive-masterlist-table td {
+        border: 1px solid black !important;
+        padding: 8px !important;
+        font-size: 0.9em !important;
+        text-align: left !important;
+    }
+    .interactive-masterlist-table thead th {
+        background-color: #f8f9fa !important;
+        color: black !important;
+    }
+   
+    .btn-print, .btn-add-row, .masterlist-controls {
+        display: none !important;
+    }
+}

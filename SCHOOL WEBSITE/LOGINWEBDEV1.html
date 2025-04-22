@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>School Coding Page</title>
+  <link rel="stylesheet" href="LOGINWEBDEV1.css"/>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <img src="Logoo.png" alt="School Logo" class="logo"/>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showContent('homeContent')">HOME</a></li>
+        <li><a href="#" onclick="showContent('aboutContent')">ABOUT US</a></li>
+        <li><a href="#" onclick="showContent('admissionContent')">ADMISSION</a></li>
+        <li><a href="#" onclick="showContent('academicsContent')">ACADEMICS</a></li>
+        <li><a href="#" onclick="showContent('enrollContent')">ENROLL</a></li>
+        <li><a href="#" onclick="showContent('contactContent')">CONTACT US</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+   
+    <div class="content" id="homeContent">
+      <h1><br>WELCOME</h1>
+      <h2><br>GALING BELMONTE, TATAK BELMONTE.</h2>
+      <button class="login-btn" onclick="location.href='login.html'">LOG IN</button>
+      <button class="register-btn" onclick="location.href='REGISTER.html'">REGISTER</button>
+    </div>
+
+    
+    <div class="content" id="aboutContent">
+        <h1>About Us</h1>
+        <p>Judge Feliciano Belmonte Sr. High School is the youngest public high school in Quezon City, established on June 10, 2008, in response to the strong clamor of residents from Brgy. Holy Spirit. Originally an annex of Holy Spirit National High School, it gained full independence on January 28, 2009—the shortest transition in the history of annex school separations.
+          The school sits on a 5,000-square-meter property along AFP Road, Brgy. Holy Spirit, serving over 330,000 residents in the area. Named after Judge Feliciano Belmonte Sr., a respected public servant, the institution started with 1,623 students and a team of 35 teachers under the leadership of Dr. Agapito T. Lera.
+          Despite limited resources in its early days, the school thrived through the collective efforts of administrators, faculty, local officials, and the community. It has since become known for academic excellence, discipline, and a clean and peaceful environment.     
+          The school also implements "Sagip Hinto sa Pag-aaral", a program supporting at-risk students by providing them with a weekly allowance to continue their education. 
+          Now with over 123 teachers, JFBSHS is committed to producing globally competitive graduates and remains a symbol of progress and hope in the community.</p>
+  
+          <h1>MISSION</h1>
+          <p>To protect and promote the right of every Filipino to quality, equitable, culture-based, and complete basic education where:
+              Students learn in a child-friendly, gender-sensitive, safe, and motivating environment.
+              Teachers facilitate learning and constantly nurture every learner.
+              Administrators and staff, as stewards of the institution, ensure an enabling and supportive environment for effective learning to happen.
+              Family, community, and other stakeholders are actively engaged and share responsibility for developing life-long learners.
+              </p>
+  
+              <h1>VISION</h1>
+              <p>We dream of Filipinos
+                  who passionately love their country
+                  and whose values and competencies
+                  enable them to realize their full potential
+                  and contribute meaningfully to building the nation.
+                  As a learner-centered public institution,
+                  the Department of Education
+                  continuously improves itself
+                  to better serve its stakeholders.</p>
+      </div>
+
+   
+    <div class="content" id="admissionContent">
+          <h2>Admission Process</h2>
+<p>Judge Feliciano Belmonte Sr. High School welcomes all students who wish to learn and grow. Here are the steps to apply:</p>
+
+<ol>
+  <li><strong>Prepare the required documents:</strong> such as the Report Card, Birth Certificate, Good Moral Certificate, and 2 pcs. 1x1 ID pictures.</li>
+  <li><strong>Visit our Admission Office</strong> located at Belmonte Hall to submit your requirements.</li>
+  <li><strong>Wait for the verification</strong> of your documents by our Registrar or School Head.</li>
+  <li><strong>Once approved, proceed to the Enrollment Section</strong> to officially register as a student.</li>
+</ol>
+<p>We warmly invite incoming students to join our school community and be part of a meaningful educational journey!</p>
+
+    </div>
+
+    
+    <div class="content" id="academicsContent">
+      <h1>Academics</h1>
+      <p>Belmonte High offers Junior And Senior High School tracks: <strong>ABM, HUMSS, GAS, HE, ICT, IA</strong> guided by experienced educators.</p>
+      <p>We blend traditional classroom instruction with modern technology to ensure quality education for all learners.</p>
+    </div>
+
+    
+    <div class="content" id="enrollContent">
+      <h1>Enroll</h1>
+      <p>Online enrollment is now open! Create an account, submit your documents, and begin your journey at Belmonte High today.</p>
+      <p>Need help? Our enrollment support team is ready to assist you via email or in person.</p>
+    </div>
+
+    
+    <div class="content" id="contactContent">
+        <h1>Contact Us</h1>
+        
+        <p><strong>Email:</strong><br>
+        hs.judgefelicianobelmonte@depedqc.ph</p>
+        
+        <p><strong>Phone:</strong><br>
+        0951 937 9711</p>
+        
+        <p><strong>Location:</strong><br>
+        M3HC+9G7, AFP Road, Quezon City, Metro Manila<br>
+        Judge Feliciano Belmonte Sr. High School</p>
+      </div>
+      
+  </main>
+
+  <script>
+    function showContent(id) {
+      const sections = document.querySelectorAll('.content');
+      sections.forEach(section => section.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
+
+
+

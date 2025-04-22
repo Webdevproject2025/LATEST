@@ -1,0 +1,92 @@
+.editable-checklist-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.9em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.editable-checklist-table th,
+.editable-checklist-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.editable-checklist-table thead th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.editable-checklist-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.editable-checklist-table input[type="text"] {
+    width: calc(100% - 12px);
+    padding: 6px;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    font-size: inherit;
+    background-color: transparent;
+}
+
+.editable-checklist-table input[type="text"]:focus {
+    border-bottom: 1px solid #007bff;
+    outline: none;
+}
+
+.btn-print,
+.btn-add-row {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #28a745; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-print:hover,
+.btn-add-row:hover {
+    background-color: #1e7e34;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .editable-checklist-table, .editable-checklist-table * {
+        visibility: visible;
+    }
+    .editable-checklist-table {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100% !important;
+        border-collapse: collapse !important;
+    }
+    .editable-checklist-table th,
+    .editable-checklist-table td {
+        border: 1px solid black !important;
+        padding: 8px !important;
+        font-size: 0.9em !important;
+        text-align: left !important;
+    }
+    .editable-checklist-table thead th {
+        background-color: #f8f9fa !important;
+        color: black !important;
+    }
+   
+    .btn-print, .btn-add-row, .checklist-controls {
+        display: none !important;
+    }
+}

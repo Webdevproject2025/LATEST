@@ -1,0 +1,132 @@
+.bmi-input-form label {
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.bmi-input-form input[type="text"],
+.bmi-input-form input[type="number"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    box-sizing: border-box;
+    font-size: 0.9em;
+}
+
+.btn-calculate-bmi {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-calculate-bmi:hover {
+    background-color: #0056b3;
+}
+
+.bmi-result {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.bmi-result h3 {
+    margin-top: 0;
+}
+
+.bmi-list {
+    margin-top: 30px;
+}
+
+.bmi-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.9em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.bmi-table th,
+.bmi-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.bmi-table thead th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.bmi-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.btn-print,
+.btn-save,
+.btn-load {
+    padding: 10px 15px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    margin-left: 10px; 
+    background-color: #28a745; 
+}
+
+.btn-print:hover,
+.btn-save:hover,
+.btn-load:hover {
+    background-color: #1e7e34; 
+}
+
+
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .bmi-list, .bmi-list * {
+        visibility: visible;
+    }
+    .bmi-list {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .bmi-table {
+        border-collapse: collapse !important;
+        width: 100% !important;
+    }
+    .bmi-table th,
+    .bmi-table td {
+        border: 1px solid black !important;
+        padding: 8px !important;
+        font-size: 0.9em !important;
+    }
+    .bmi-table thead th {
+        background-color: #f8f9fa !important;
+        color: black !important;
+    }
+    
+    .btn-print, .btn-save, .btn-load, .bmi-input-form, .bmi-result, .bmi-list-controls {
+        display: none !important;
+    }
+}
